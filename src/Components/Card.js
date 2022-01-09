@@ -16,6 +16,11 @@ export default function Card() {
 		setLoaded(true);
 	}
 
+	const updateDays = () => {
+		setLoaded(false);
+		setDays(days + 25);
+	};
+
 	useEffect(() => {
 		setLoaded(false);
 	}, []);
@@ -147,6 +152,9 @@ export default function Card() {
 								);
 							}
 						})}
+					<div className='py-16'>
+						<button onClick={updateDays}>Load More</button>
+					</div>
 				</div>
 			</ul>
 		);
