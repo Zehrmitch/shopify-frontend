@@ -62,8 +62,7 @@ export default function Card() {
 		return [year, month, day].join('-');
 	}
 
-	const handleClick = (e) => {
-		e.preventDefault();
+	const handleClick = () => {
 		setShowModal(!showModal);
 	};
 
@@ -129,7 +128,7 @@ export default function Card() {
 														{image.copyright}
 													</span>
 													<span>
-														<Like></Like>
+														<Like id={image}></Like>
 													</span>
 												</dd>
 											</dl>
@@ -170,7 +169,7 @@ export default function Card() {
 															: 'Unknown Artist'}
 													</span>
 													<span>
-														<Like></Like>
+														<Like id={image}></Like>
 													</span>
 													<span>
 														<Link img={image} />
