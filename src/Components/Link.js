@@ -23,7 +23,7 @@ const Link = (props) => {
 						<LinkIcon />
 					) : (
 						<div>
-							<CheckIcon /> <p>{'  '}Copied to clipboard</p>
+							<CheckIcon /> <p>{'  '}Copied!</p>
 						</div>
 					)}
 				</div>
