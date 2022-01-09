@@ -14,7 +14,7 @@ const Like = () => {
 		<div>
 			<button onClick={toggle}>
 				<div className='w-6 h-6'>
-					{liked === false ? <SolidHeartIcon /> : <HeartIcon />}
+					{liked === false ? <HeartIcon /> : <SolidHeartIcon />}
 				</div>
 			</button>
 		</div>
