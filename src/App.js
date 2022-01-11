@@ -4,7 +4,7 @@ import Foot from './Pages/Foot.js';
 
 function App() {
 	return (
-		<div className='flex flex-col bg-gradient-to-b from-indigo-500/50 via-purple-500/50 to-pink-500/50'>
+		<div className='flex flex-col bg-gradient-to-b from-blue-500/50 via-pink-500/50 to-white/50'>
 			<Feed></Feed>
 			<Foot></Foot>
 		</div>

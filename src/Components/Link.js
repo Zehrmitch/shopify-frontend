@@ -18,7 +18,7 @@ const Link = (props) => {
 	return (
 		<div>
 			<button onClick={copy}>
-				<div className='w-6 h-6'>
+				<div className='w-6 h-6 flex flex-row text-sm'>
 					{copied === false ? (
 						<LinkIcon />
 					) : (

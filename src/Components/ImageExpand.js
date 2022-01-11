@@ -13,7 +13,7 @@ export default function ImageExpand(props) {
 	return (
 		<div>
 			<img
-				className='w-fit max-w-lg h-auto flex-shrink-0 mx-auto rounded-lg'
+				className='w-[100%] max-w-lg h-auto flex-shrink-0 mx-auto rounded-lg'
 				src={props.img.url}
 				alt={props.img.title}
 				onClick={handleClick}

@@ -57,7 +57,7 @@ export default function Card() {
 				<img
 					src='https://s3.us-east-2.amazonaws.com/bunkiebooker.bucket/sp_loader.gif'
 					alt='Loading...'
-					className='h-auto opacity-95 rounded-lg'
+					className='h-auto opacity-90 rounded-lg'
 				/>
 			</div>
 		);
@@ -163,8 +163,13 @@ export default function Card() {
 								);
 							}
 						})}
-					<div className='text-center my-16 py-4 px-2 rounded-md bg-white'>
-						<button onClick={updateDays}>Load More</button>
+					<div className='flex justify-center'>
+						<button
+							className='text-center mb-16 py-4 px-2 rounded-md bg-blue-500/50'
+							onClick={updateDays}
+						>
+							Load More
+						</button>
 					</div>
 				</div>
 			</ul>
