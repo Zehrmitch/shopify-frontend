@@ -163,7 +163,7 @@ export default function Card() {
 								);
 							}
 						})}
-					<div className='py-16'>
+					<div className='text-center my-16 py-4 px-2 rounded-md bg-white'>
 						<button onClick={updateDays}>Load More</button>
 					</div>
 				</div>
