@@ -73,13 +73,15 @@ export default function Card() {
 								return (
 									<li
 										key={index}
-										className='col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y  max-w-xl my-8'
+										className='col-span-1 flex flex-col text-center bg-white/80 rounded-lg shadow-md divide-y max-w-xl my-8'
 									>
 										<div className='flex-1 flex flex-col p-8 '>
-											<h1 className='mt-2 text-gray-900 text-sm font-medium'>
+											<h1 className='text-center my-2 text-3xl font-extrabold text-gray-900'>
 												{image.title}
 											</h1>
-											<h3>{image.date}</h3>
+											<h3 className='text-right pr-2 text-gray-600'>
+												Date: {image.date}
+											</h3>
 											<ReactPlayer
 												url={image.url}
 												width='100%'
@@ -93,12 +95,19 @@ export default function Card() {
 													Role
 												</dt>
 												<dd className='mt-3 flex justify-end'>
-													<span className='px-2 py-1 text-green-800 text-xs font-medium bg-green-100 rounded-full'>
+													<span className='px-4 pt-2 mr-2 text-gray-700 text-xs font-medium bg-blue-200 rounded-md'>
 														Copyright:{' '}
-														{image.copyright}
+														{image.hasOwnProperty(
+															'copyright'
+														)
+															? image.copyright
+															: 'Unknown Artist'}
 													</span>
-													<span>
+													<span className='px-2 pt-1 mr-1'>
 														<Like id={image}></Like>
+													</span>
+													<span className='px-2 pt-1 mr-1'>
+														<Link img={image} />
 													</span>
 												</dd>
 											</dl>
@@ -109,13 +118,15 @@ export default function Card() {
 								return (
 									<li
 										key={index}
-										className='col-span-1 flex flex-col text-center bg-white/60 rounded-lg shadow-md shadow-red-500/50 divide-y divide-gray-200 max-w-xl my-8'
+										className='col-span-1 flex flex-col text-center bg-white/80 rounded-lg shadow-md divide-y divide-gray-200 max-w-xl my-8'
 									>
 										<div className='flex-1 flex flex-col p-8'>
-											<h1 className='text-center mt-6 text-3xl font-extrabold text-gray-900'>
+											<h1 className='text-center my-2 text-3xl font-extrabold text-gray-900'>
 												{image.title}
 											</h1>
-											<h3>{image.date}</h3>
+											<h3 className='text-right pr-2 text-gray-600'>
+												Date: {image.date}
+											</h3>
 											<div>
 												<ImageExpand
 													img={image}
@@ -131,7 +142,7 @@ export default function Card() {
 													Role
 												</dt>
 												<dd className='mt-3 flex justify-end'>
-													<span className='px-2 py-1 text-green-800 text-xs font-medium bg-green-100 rounded-full'>
+													<span className='px-4 pt-2 mr-2 text-gray-700 text-xs font-medium bg-blue-200 rounded-md'>
 														Copyright:{' '}
 														{image.hasOwnProperty(
 															'copyright'
@@ -139,10 +150,10 @@ export default function Card() {
 															? image.copyright
 															: 'Unknown Artist'}
 													</span>
-													<span>
+													<span className='px-2 pt-1 mr-1'>
 														<Like id={image}></Like>
 													</span>
-													<span>
+													<span className='px-2 pt-1 mr-1'>
 														<Link img={image} />
 													</span>
 												</dd>
