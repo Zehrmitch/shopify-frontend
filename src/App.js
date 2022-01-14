@@ -1,4 +1,3 @@
-import Like from './Components/Like.js';
 import Feed from './Pages/Feed.js';
 import Foot from './Pages/Foot.js';
 

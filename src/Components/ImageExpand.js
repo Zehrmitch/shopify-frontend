@@ -1,5 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
-import { Dialog, Transition } from '@headlessui/react';
+import React, { useState } from 'react';
 
 export default function ImageExpand(props) {
 	const [showModal, setShowModal] = useState(false);
@@ -25,7 +24,7 @@ export default function ImageExpand(props) {
 							className='w-fit max-w-2xl h-auto flex-shrink-0 mx-auto rounded-lg'
 							src={props.img.url}
 							onClick={handleClick}
-							alt='no image'
+							alt='Image'
 						/>
 					</div>
 				</dialog>
